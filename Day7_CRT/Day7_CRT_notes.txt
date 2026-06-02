@@ -1,0 +1,40 @@
+1. Binary search:-i. It is faster than linear search
+		  ii. Half of the remaining element can be eliminated at a time , instead of eliminating them one by   
+ 		  one
+		  iii. Binary search only works for sorted array
+
+2.Ex:-searching for 12
+    [2,4,5,9,11,13,14,15,19,20,22,23,27,30,32,39]
+   [2,4,5,9,11,13,14,15,19,20,22,23,27,30,32,39] /mid value is 8=16/2/it will compare with searching value which is                              		      ^							12
+    [2,4,5,9,11,13,14]//as value is not equal to 12 i.e 15=12 false it will search further 
+           ^
+   [11,13,14] //now it will perform same searching and compare mid value to searching value 
+       ^
+    [11]//as value is not equal to 12 it will return output as "Not found"   
+
+3. Ex:- Searching for 72 
+  [2,4,5,9,11,13,14,15,19,20,22,23,27,30,32,39,42,44,45,51,53,54,55,56,60,62,63,67,70,72,79]  
+//Binary searching is applied the mid value will be 39 and it will compare to target value as it is less than target value now it will search toward right side
+  [2,4,5,9,11,13,14,15,19,20,22,23,27,30,32,39,42,44,45,51,53,54,55,56,60,62,63,67,70,72,79]        
+                                            ^
+ [42,44,45,51,53,54,55,56,60,62,63,67,70,72,79]  
+//Binary searching is applied the mid value will be 55 and it will compare to target value as it is less than target value now it will search toward right side
+ [42,44,45,51,53,54,55,56,60,62,63,67,70,72,79] 
+                    ^
+ [56,60,62,63,67,70,72,79] 
+//Binary searching is applied the mid value will be 63 and it will compare to target value as it is less than target value now it will search toward right side
+ [56,60,62,63,67,70,72,79] 
+           ^
+[67,70,72,79]
+//Binary searching is applied the mid value will be 70 and it will compare to target value as it is less than target value now it will search toward right side
+[67,70,72,79]
+    ^
+[72,79]//Binary searching is applied the mid value will be 72 and it will compare to target value as it is equal it will return that value 
+
+searching is finished in 5 steps Log2N 2^x=N
+
+
+
+ 
+
+        
