@@ -1,0 +1,6 @@
+1. Stack :- i. Stack is implemented by array and linked list
+            ii. Array gives problem as data of stack grows certain limit at that time linkesd list is prefer      	        linked list 
+
+2.constructor used to allocate the memory to the objects to access the class members
+
+3 Object is also know as reference variable

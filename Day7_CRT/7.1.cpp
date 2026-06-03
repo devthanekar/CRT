@@ -22,9 +22,9 @@
       return -1;
     }
     int main(){
-    int arr[]={10,20,30,40,50,60,70};
+    int arr[]={1,2,3,4,5};
     int size =sizeof(arr)/sizeof(arr[0]);// use to calculate size of array
-    int target=50;
+    int target=4;
     int result=binarySearch(arr, size ,target);
     if (result !=-1){
             cout<<"Element found at index no="<<result;
