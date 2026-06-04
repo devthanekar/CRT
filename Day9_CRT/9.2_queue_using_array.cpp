@@ -40,7 +40,7 @@ public://initialization
         return ;
 
        }
-       for(int i=front;i<rear;i++){
+       for(int i=front;i<=rear;i++){
         cout<<arr[i]<<" ";
        }
    }
