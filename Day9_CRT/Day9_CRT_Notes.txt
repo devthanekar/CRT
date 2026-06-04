@@ -1,0 +1,10 @@
+1.A tree is nonlinear data structure with hierarchical relationships between its element without having any cycle ,              
+  it is basically reversed from a real life tree
+2.Quicker and easier access to the data 
+3.Store hierarchical data ,like folder structure, organization structure, XML/HTML data. 
+4.terminologies of tree 
+   i.  Root:- top node without parent
+   ii. Edge :- a link between parent and child
+   iii.Leaf:- a node which does not have children 
+   iv. sibling :- Children of same parents 
+   v:- Ancestor :-Parents, grandparents ,great-grandparents of tree
