@@ -14,7 +14,7 @@ int main()
     }
     else
         {
-                 cout<<"String are not equal"<<endl;
+                cout<<"String are not equal"<<endl;
 
         }
 
