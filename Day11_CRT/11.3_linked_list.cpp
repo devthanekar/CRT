@@ -1,78 +1,72 @@
-#include<iostream> // single linked list
+#include<iostream>
+#include<iostream>
 using namespace std;
-
-// separate node class
-class Node{
-public:
+//node class
+class Node
+{
+public: //var declaration
     int data;
-    Node* next;
+    Node *next;
+    Node(int value)//constructor(memory initialization)
+    {
+        data=value;//(10)-->(20)
+        next=NULL;
 
-    Node(int value){
-        data = value;
-        next = NULL;
     }
 };
-
-// insert value at beginning
-void insertAtBeginning(Node* &head, int value)
+//insert value in the beginning
+void insertAtBeginning(Node*& head,int value)
 {
-    Node* newNode = new Node(value);
-    newNode->next = head;
-    head = newNode;
+    Node *newnode = new Node(value);
+    newnode->next=head;
+    head=newnode;
 }
-
-// insert value at end
-void insertAtEnd(Node* &head, int value)
-{
-    Node* newNode = new Node(value);
-
-    if(head == NULL){
-        head = newNode;
-        return;
-    }
-
-    Node* temp = head;
-
-    while(temp->next != NULL){
-        temp = temp->next;
-    }
-
-    temp->next = newNode;
-}
-
 void display(Node* head)
 {
-    if(head == NULL){
-        cout << "Linked list is empty" << endl;
+    if(head == NULL)
+    {
+        cout<<"Linkedlist is empty"<<endl;
         return;
     }
-
-    Node* temp = head;
-
-    while(temp != NULL){
-        cout << temp->data << " ";
-        temp = temp->next;
+    Node *temp = head;
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" | "<<temp->next<<"->";
+        temp=temp->next;
     }
-
-    cout << endl;
 }
-
-int node()
+//insert at end
+void insertAtEnd(Node*&head,int value)
 {
-    Node* head = NULL;
-
-    insertAtBeginning(head, 5);
-    insertAtEnd(head, 10);
-    insertAtEnd(head, 20);
-    insertAtEnd(head, 40);
-
-    display(head);   // Display list here 
-
-    return 0;
+    Node* newNode = new Node(value);//10,20,40
+    if(head== NULL)
+    {
+    head=newNode;
+        return;
+    }
+    Node* temp=head;
+    while(temp->next !=NULL)
+    {
+        temp=temp->next;
+    }
+    temp->next=newNode;
 }
-
 int main()
 {
-    node();
-    return 0;
-} 
+    Node *head= NULL;
+    //Insert at end
+    insertAtEnd(head,10);
+    insertAtEnd(head,20);
+    insertAtEnd(head,40);
+
+    //insert at beginning
+    insertAtBeginning(head,5);
+
+
+
+
+
+
+
+display(head);
+}
