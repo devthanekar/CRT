@@ -1,51 +1,78 @@
-#include<iostream>
+#include<iostream> // single linked list
 using namespace std;
-//node class
-class Node
-{
-public: //var declaration
-    int data;
-    Node *next;
-    Node(int value)//constructor(memory initialization)
-    {
-        data=value;
-        next=NULL;
 
+// separate node class
+class Node{
+public:
+    int data;
+    Node* next;
+
+    Node(int value){
+        data = value;
+        next = NULL;
     }
 };
-//insert value in the beginning
-void insertAtBeginning(Node*& head,int value)
+
+// insert value at beginning
+void insertAtBeginning(Node* &head, int value)
 {
-    Node *newnode = new Node(value);
-    newnode->next=head;
-    head=newnode;
+    Node* newNode = new Node(value);
+    newNode->next = head;
+    head = newNode;
 }
-//insert at end
-void insertAtEnd(Node*& head,int value)
+
+// insert value at end
+void insertAtEnd(Node* &head, int value)
 {
-    Node* newNode = new Node(value);//10,20
-    if(head== NULL)
-    {
-        head=newNode;
+    Node* newNode = new Node(value);
+
+    if(head == NULL){
+        head = newNode;
         return;
     }
-    Node* temp=head;
-    while(temp->next !=NULL)
-    {
-        temp=temp->next;
+
+    Node* temp = head;
+
+    while(temp->next != NULL){
+        temp = temp->next;
     }
-    temp->next=newNode;
+
+    temp->next = newNode;
 }
+
+void display(Node* head)
+{
+    if(head == NULL){
+        cout << "Linked list is empty" << endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp != NULL){
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+
+    cout << endl;
+}
+
+int node()
+{
+    Node* head = NULL;
+
+    insertAtBeginning(head, 5);
+    insertAtEnd(head, 10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 40);
+
+    display(head);   // Display list here 
+
+    return 0;
+}
+
 int main()
 {
-    Node *head= NULL;
-    //Insert at end
-    insertAtEnd(head,10);
-    insertAtEnd(head,20);
-    insertAtEnd(head,40);
-
-    //insert at beginning
-    insertAtBeginning(head,5);
-
-
-}
+    node();
+    return 0;
+} 
