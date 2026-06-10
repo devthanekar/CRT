@@ -1,0 +1,8 @@
+1.STL:- Standard Template Library
+	It is an acronym for standard template library. It is a set of c++ template classes that provide generic classes and function that can be used to implement data structure and algorithms .
+2.STL is mainly  composed of :i.   Algorithm
+			      ii.  Containers
+			      iii. Iterations
+3. STL provides numerous containers and algorithms which are very useful in completive programing.
+4.You can very easily define a linked list in a single statement by using list container of container library .
+
